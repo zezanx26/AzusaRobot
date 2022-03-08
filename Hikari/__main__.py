@@ -816,7 +816,7 @@ def main():
     )
 
     about_callback_handler = CallbackQueryHandler(
-        prime_about_callback, pattern=r"hikari_", run_async=True
+        hikari_about_callback, pattern=r"hikari_", run_async=True
     )
 
     source_callback_handler = CallbackQueryHandler(
