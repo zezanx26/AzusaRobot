@@ -359,9 +359,9 @@ def help_button(update, context):
         pass
 
 
-def prime_about_callback(update, context):
+def hikari_about_callback(update, context):
     query = update.callback_query
-    if query.data == "prime_":
+    if query.data == "hikari_":
         query.message.edit_text(
             text="๏ I'm *Hikari Robot*, a powerful group management bot built to help you manage your group easily."
             "\n• My Owner : @JustRex ."
@@ -393,7 +393,7 @@ def prime_about_callback(update, context):
                 ]
             ),
         )
-    elif query.data == "prime_back":
+    elif query.data == "hikari_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
@@ -408,7 +408,7 @@ def prime_about_callback(update, context):
                 disable_web_page_preview=True,
         )
 
-    elif query.data == "prime_admin":
+    elif query.data == "hikari_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
             "\nCongragulations, Hikari Robot now ready to manage your group."
@@ -425,7 +425,7 @@ def prime_about_callback(update, context):
             ),
         )
 
-    elif query.data == "prime_notes":
+    elif query.data == "hikari_notes":
         query.message.edit_text(
             text=f"<b>๏ Setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
@@ -436,7 +436,7 @@ def prime_about_callback(update, context):
                 [[InlineKeyboardButton(text="Go Back", callback_data="prime_")]]
             ),
         )
-    elif query.data == "prime_support":
+    elif query.data == "hikari_support":
         query.message.edit_text(
             text="*๏ Hikari support chats*"
             "\nJoin My Support Group/Channel for see or report a problem on Hikari.",
@@ -456,7 +456,7 @@ def prime_about_callback(update, context):
         )
 
 
-    elif query.data == "prime_credit":
+    elif query.data == "hikari_credit":
         query.message.edit_text(
             text=f"<b>๏ Credis for Hikari</b>\n"
             f"\nHere Developers Making The Hikari Robot",
@@ -816,7 +816,7 @@ def main():
     )
 
     about_callback_handler = CallbackQueryHandler(
-        prime_about_callback, pattern=r"prime_", run_async=True
+        prime_about_callback, pattern=r"hikari_", run_async=True
     )
 
     source_callback_handler = CallbackQueryHandler(
