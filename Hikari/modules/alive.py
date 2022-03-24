@@ -13,12 +13,12 @@ PHOTO = "https://telegra.ph/file/1be0ff236e8c3de2772c4.jpg"
 
 @register(pattern=("/alive"))
 async def awake(event):
-  PRIME = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}), I'm Hikari Robot.** \n\n"
-  PRIME += "🌼 **I'm Working Properly** \n\n"
-  PRIME += f"🌼 **My Darling : [ʀᴇxᴧ-ᴇx](https://t.me/JustRex)** \n\n"
-  PRIME += f"🌼 **Library Version :** `{telever}` \n\n"
-  PRIME += f"🌼 **Telethon Version :** `{tlhver}` \n\n"
-  PRIME += f"🌼 **Pyrogram Version :** `{pyrover}` \n\n"
-  PRIME += "**Thanks For Adding Me Here ❤️**"
+  PRIME = f"**ʜɪ [{event.sender.first_name}](tg://user?id={event.sender.id}), ᴀᴋᴜ ʜɪᴋᴀʀɪ ʀᴏʙᴏᴛ.** \n\n"
+  PRIME += "🌼 **ᴀᴋᴜ sᴇʟᴀʟᴜ ʜɪᴅᴜᴘ ᴅᴀɴ ʙᴇᴋᴇʀᴊᴀ** \n\n"
+  PRIME += f"🌼 **ᴍʏ ᴅᴀʀʟɪɴɢ : [ʀᴇxᴧ-ᴇx](https://t.me/JustRex)** \n\n"
+  PRIME += f"🌼 **ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ :** `{telever}` \n\n"
+  PRIME += f"🌼 **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{tlhver}` \n\n"
+  PRIME += f"🌼 **ᴘʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ :** `{pyrover}` \n\n"
+  PRIME += "**ᴛᴇʀɪᴍᴀᴋᴀsɪʜ sᴜᴅᴀʜ ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ ᴋᴜ ᴅɪsɪɴɪ ❤️**"
   BUTTON = [[Button.url("ʜᴇʟᴘ​", "https://t.me/HikariManageRobot?start=help"), Button.url("sᴜᴘᴘᴏʀᴛ​", "https://t.me/rexaprivateroom")]]
   await tbot.send_file(event.chat_id, PHOTO, caption=PRIME,  buttons=BUTTON)
