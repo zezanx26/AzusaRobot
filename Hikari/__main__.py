@@ -81,8 +81,9 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
+──「 [ʜɪᴋᴀʀɪ](https://telegra.ph/file/04f66ec701272eb5845ed.jpg) 」──
 *Hello {} !*
-🌼 I'm an anime-theme management bot [🌼](https://telegra.ph/file/04f66ec701272eb5845ed.jpg)
+🌼 I'm an anime-theme management bot 🌼
 ────────────────────────
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
@@ -174,7 +175,6 @@ def send_help(chat_id, text, keyboard=None):
         chat_id=chat_id,
         text=text,
         parse_mode=ParseMode.MARKDOWN,
-        disable_web_page_preview=False,
         reply_markup=keyboard,
     )
 
