@@ -114,7 +114,7 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-PRIME_IMG = "https://telegra.ph/file/b9fa4e1360d0a872a3cd5.jpg"
+HIKARI_IMG = "https://telegra.ph/file/04f66ec701272eb5845ed.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @JustRex \
@@ -792,7 +792,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "👋 Hi friends, I'm alive.",
+                "👋 Hi friends, I'm Here Just For you .",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
