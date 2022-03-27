@@ -1,29 +1,56 @@
 # Rexa!
 
 
+import os
 import random
-
-
-from Hikari.events import register
-from telethon.tl.types import InputMessagesFilterVideo
-from telethon.tl.types import InputMessagesFilterVoice
 from telethon.tl.types import InputMessagesFilterPhotos
+from telethon.tl.types import InputMessagesFilterVideo
+from Hikari.events import register
+from Hikari import telethn as tbot, ubot2                 
 
-@register(pattern=("/asupan"))
+
+@register(pattern="^/asupan ?(.*)")
 async def _(event):
+    memeks = await event.reply("**Mencari Video Asupan...🔍**") 
     try:
         asupannya = [
             asupan
-            async for asupan in event.client.iter_messages(
-                "@asupancilikbot", filter=InputMessagesFilterVideo
+            async for asupan in ubot2.iter_messages(
+            "@Database_TonicUbot", filter=InputMessagesFilterVideo
             )
         ]
-        aing = await event.client.get_me()
-        await event.client.send_file(
-            event.chat_id,
-            file=random.choice(asupannya),
-            caption=f"Nih kak asupannya [{event.sender.first_name}](tg://user?id={aink.id})",
-        )
-        await event.delete()
+        kontols = random.choice(asupannya)
+        pantek = await ubot2.download_media(kontols)
+        await tbot.send_file(
+            event.chat.id, 
+            caption="Nih Asupan nya Kak 🥵", 
+            file=pantek
+            )
+        await memeks.delete()
     except Exception:
-        await event.edit("Tidak bisa menemukan video asupan.")
+        await memeks.edit("Asupannya gaada komsol")  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
