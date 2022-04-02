@@ -328,8 +328,8 @@ def info(update: Update, context: CallbackContext):
     elif user.id in WOLVES:
         text += "\n\nThe Disaster level of this person is 'Soldier'."
         disaster_level_present = True
-    elif user.id == 1416529201:
-         text += "\n\nOwner Of A Bot. Queen Of @Bukan_guudlooking. Bot Name Inspired From 'JoJo'."
+    elif user.id == 1224143544:
+         text += "\n\nOwner Of A Bot. King Of @JustRex. Bot Name Inspired From 'Anime'."
          disaster_level_present = True
 
     try:
@@ -384,9 +384,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/PrimeSupportChannel"),
+                                "Health", url="https://t.me/rexaprivateroom"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/PrimeSupportChannel")
+                                "Disaster", url="https://t.me/rexaprivateroom")
                         ],
                     ]
                 ),
@@ -458,7 +458,7 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "❂ <b>Stats For <a href='https://t.me/HikariRobot'>Hiraki Robot</a>:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "❂ <b>Stats For <a href='https://t.me/HikariManageRobot'>Hikari Robot</a>:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     update.effective_message.reply_text(
         result,
