@@ -53,6 +53,29 @@ async def _(event):
         await memeks.edit("PP animenya ga ada ")  
 
 
+@register(pattern="^/wallanime ?(.*)")
+async def _(event):
+    memeks = await event.reply("**Mencari Wallpaper Anime...🔍**") 
+    try:
+        asupannya = [
+            asupan
+            async for asupan in ubot2.iter_messages(
+            "@Anime_WallpapersHD", filter=InputMessagesFilterPhotos
+            )
+        ]
+        kontols = random.choice(asupannya)
+        pantek = await ubot2.download_media(kontols)
+        await tbot.send_file(
+            event.chat.id, 
+            caption="Nih Wallpaper Animenya ", 
+            file=pantek
+            )
+        await memeks.delete()
+    except Exception:
+        await memeks.edit("Wallpaper Animenya Kosong ")  
+
+
+
 
 
 
