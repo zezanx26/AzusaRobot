@@ -31,6 +31,29 @@ async def _(event):
         await memeks.edit("Asupannya gaada komsol")  
 
 
+@register(pattern="^/ppanime ?(.*)")
+async def _(event):
+    memeks = await event.reply("**Mencari PP Anime...🔍**") 
+    try:
+        asupannya = [
+            asupan
+            async for asupan in ubot2.iter_messages(
+            "@animehikarixa", filter=InputMessagesFilterVideo
+            )
+        ]
+        kontols = random.choice(asupannya)
+        pantek = await ubot2.download_media(kontols)
+        await tbot.send_file(
+            event.chat.id, 
+            caption="Nih pp animenya ", 
+            file=pantek
+            )
+        await memeks.delete()
+    except Exception:
+        await memeks.edit("PP animenya ga ada ")  
+
+
+
 
 
 
