@@ -113,7 +113,7 @@ async def logo_gen(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [ᴘʀɪᴍᴇ ᴍᴇɢᴀ](https://t.me/HikariBot)",
+            caption="Logo by [Hikari Robot](https://t.me/HikariBot)",
             force_document=False,
         )
         os.remove(flnme)
@@ -196,7 +196,7 @@ async def logo_(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [ᴘʀɪᴍᴇ ᴍᴇɢᴀ](https://t.me/HikariBot)",
+            caption="Logo by [Hikari Robot](https://t.me/HikariBot)",
             force_document=False,
         )
         os.remove(flnme)
@@ -206,7 +206,6 @@ async def logo_(event):
     if os.path.exists(font_):
         if not font_.startswith("./Hikari/resources/fonts"):
             os.remove(font_)
-
 
 __mod_name__ = "Logomaker"
 
