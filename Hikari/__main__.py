@@ -228,7 +228,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
-                disable_web_page_preview=True,
+                disable_web_page_preview=False,
             )
     else:
         update.effective_message.reply_text(
@@ -377,18 +377,18 @@ def hikari_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="prime_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="prime_notes"),
+                    InlineKeyboardButton(text="Admins", callback_data="hikari_admin"),
+                    InlineKeyboardButton(text="Notes", callback_data="hikari_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="prime_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="prime_credit"),
+                    InlineKeyboardButton(text="Support", callback_data="hikari_support"),
+                    InlineKeyboardButton(text="Credits", callback_data="hikari_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Musicplayer", callback_data="source_"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="prime_back"),
+                    InlineKeyboardButton(text="Go Back", callback_data="hikari_back"),
                  ]
                 ]
             ),
@@ -405,7 +405,7 @@ def hikari_about_callback(update, context):
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
-                disable_web_page_preview=True,
+                disable_web_page_preview=False,
         )
 
     elif query.data == "hikari_admin":
