@@ -81,31 +81,30 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-──「 [ʜɪᴋᴀʀɪ](https://telegra.ph/file/04f66ec701272eb5845ed.jpg) 」──
-*Hello {} !*
-🌼 I'm an anime-theme management bot 🌼
+*ʜᴇʟʟᴏ {} !*
+⌬ ɪ'ᴍ ᴀɴ ᴀɴɪᴍᴇ-ᴛʜᴇᴍᴇ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ [🌺](https://telegra.ph/file/0b6f997589b5c9f708c4d.jpg)
 ────────────────────────
-× *Uptime:* `{}`
-× `{}` *users, across* `{}` *chats.*
+◈ *ᴜᴘᴛɪᴍᴇ:* `{}`
+◈ `{}` *ᴜsᴇʀs, ᴀᴄʀᴏss* `{}` *ᴄʜᴀᴛs*
 ────────────────────────
-🌼 Hit /help to see my available commands.
+⌬ ʜɪᴛ /help ᴛᴏ sᴇᴇ ᴍʏ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs.
 """
 
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ Add Hikari Robot to your group ➕️", url="t.me/HikariManageRobot?startgroup=true"
+            text="➕️ ᴀᴅᴅ ʜɪᴋᴀʀɪ ʀᴏʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/HikariManageRobot?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="Support", url="https://t.me/rexaprivateroom"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="https://t.me/rexaprivateroom"
         ),
         InlineKeyboardButton(
-            text="TryInline", switch_inline_query_current_chat=""
+            text="ᴛʀʏɪɴʟɪɴᴇ", switch_inline_query_current_chat=""
         ),
     ],
     [
-        InlineKeyboardButton(text="Help & Commands❓", callback_data="help_back"
+        InlineKeyboardButton(text="ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"
         ),
     ],
 ]
@@ -793,7 +792,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                "👋 Hi friends, I'm Here Just For you .",
+                "👋 ʜɪ ғʀɪᴇɴᴅs, ɪᴍ ʜᴇʀᴇ ᴊᴜsᴛ ғᴏʀ ʏᴏᴜ .",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
