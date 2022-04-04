@@ -59,7 +59,7 @@ if ENV:
     except ValueError:
         raise Exception("Your OWNER_ID env variable is not a valid integer.")
 
-    JOIN_LOGGER = os.environ.get("JOIN_LOGGER", None)
+    JOIN_LOGGER = os.environ.get("JOIN_LOGGER", "-1001683749664")
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
 
     try:
