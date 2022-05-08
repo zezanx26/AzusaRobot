@@ -71,8 +71,7 @@ python-arq
 envparse
 #profanity (Credits to Julia)
 better_profanity
-textblob 
-nudepy
+textblob
 nekos.py
 motor
 gpytranslate
