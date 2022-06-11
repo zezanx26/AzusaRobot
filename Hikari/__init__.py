@@ -23,7 +23,7 @@ from ptbcontrib.postgres_persistence import PostgresPersistence
 StartTime = time.time()
 
 def get_user_list(__init__, key):
-    with open("{}/Hikari/{}".format(os.getcwd(), __init__), "r") as json_file:
+    with open("{}/Azusa/{}".format(os.getcwd(), __init__), "r") as json_file:
         return json.load(json_file)[key]
 
 # enable logging
@@ -38,9 +38,9 @@ logging.getLogger("pyrogram").setLevel(logging.INFO)
 logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLevel(logging.WARNING)
 
 LOGGER = logging.getLogger('[Hikari]')
-LOGGER.info("Hikari is starting. | An Hikari Robot Parts. | Licensed under GPLv3.")
+LOGGER.info("Azusa is starting. | An Azusa Robot Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
-LOGGER.info("Project maintained by: github.com/Rexashh (t.me/JustRex)")
+LOGGER.info("Project maintained by: github.com/zezanx26 (t.me/wndrslna)")
 
 # if version < 3.9, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 9:
@@ -59,7 +59,7 @@ if ENV:
     except ValueError:
         raise Exception("Your OWNER_ID env variable is not a valid integer.")
 
-    JOIN_LOGGER = os.environ.get("JOIN_LOGGER", "-1001683749664")
+    JOIN_LOGGER = os.environ.get("JOIN_LOGGER", "-1001740774911")
     OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
 
     try:
@@ -219,6 +219,7 @@ DRAGONS.add(1732814103)
 DEV_USERS.add(OWNER_ID)
 DEV_USERS.add(1954289347)
 DEV_USERS.add(1416529201)
+DEV_USERS.add(1863783304)
 
 if not SPAMWATCH_API:
     sw = None
