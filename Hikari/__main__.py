@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *ʜᴇʟʟᴏ {} !*
-⌬ ɪ'ᴍ ᴀɴ ᴀɴɪᴍᴇ-ᴛʜᴇᴍᴇ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ [🌺](https://telegra.ph/file/0b6f997589b5c9f708c4d.jpg)
+⌬ ɪ'ᴍ ᴀɴ ᴀɴɪᴍᴇ-ᴛʜᴇᴍᴇ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ [🌺](https://telegra.ph/file/884e6797a14d7430ef5b7.jpg)
 ────────────────────────
 ◈ *ᴜᴘᴛɪᴍᴇ:* `{}`
 ◈ `{}` *ᴜsᴇʀs, ᴀᴄʀᴏss* `{}` *ᴄʜᴀᴛs*
@@ -93,11 +93,11 @@ PM_START_TEXT = """
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ ᴀᴅᴅ ʜɪᴋᴀʀɪ ʀᴏʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/HikariManageRobot?startgroup=true"
+            text="➕️ ᴀᴅᴅ ʜɪᴋᴀʀɪ ʀᴏʙᴏᴛ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url="t.me/AzusaxRobot?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="https://t.me/rexaprivateroom"
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url="https://t.me/zxzansupport"
         ),
         InlineKeyboardButton(
             text="ᴛʀʏɪɴʟɪɴᴇ", switch_inline_query_current_chat=""
@@ -113,10 +113,10 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-HIKARI_IMG = "https://telegra.ph/file/04f66ec701272eb5845ed.jpg"
+AZUSA_IMG = "https://telegra.ph/file/884e6797a14d7430ef5b7.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @JustRex \
+ You can support the project by contacting @wndrslna \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -131,7 +131,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("Hikari.modules." + module_name)
+    imported_module = importlib.import_module("Azusa.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -232,7 +232,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"<b>Hi I'm Hikari Robot!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
+            f"<b>Hi I'm Azusa Robot!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
             parse_mode=ParseMode.HTML
        )
 
@@ -359,12 +359,12 @@ def help_button(update, context):
         pass
 
 
-def hikari_about_callback(update, context):
+def azusa_about_callback(update, context):
     query = update.callback_query
-    if query.data == "hikari_":
+    if query.data == "azusa_":
         query.message.edit_text(
-            text="๏ I'm *Hikari Robot*, a powerful group management bot built to help you manage your group easily."
-            "\n• My Owner : @JustRex ."
+            text="๏ I'm *Azusa Robot*, a powerful group management bot built to help you manage your group easily."
+            "\n• My Owner : @wndrslna ."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
             "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
@@ -377,23 +377,23 @@ def hikari_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="hikari_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="hikari_notes"),
+                    InlineKeyboardButton(text="Admins", callback_data="azusa_admin"),
+                    InlineKeyboardButton(text="Notes", callback_data="azusa_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="hikari_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="hikari_credit"),
+                    InlineKeyboardButton(text="Support", callback_data="azusa_support"),
+                    InlineKeyboardButton(text="Credits", callback_data="azusa_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Musicplayer", callback_data="source_"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="hikari_back"),
+                    InlineKeyboardButton(text="Go Back", callback_data="azusa_back"),
                  ]
                 ]
             ),
         )
-    elif query.data == "hikari_back":
+    elif query.data == "azusa_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
@@ -408,10 +408,10 @@ def hikari_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-    elif query.data == "hikari_admin":
+    elif query.data == "azusa_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, Hikari Robot now ready to manage your group."
+            "\nCongragulations, Azusa Robot now ready to manage your group."
             "\n\n*Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
             "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -421,11 +421,11 @@ def hikari_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="hikari_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="azusa_")]]
             ),
         )
 
-    elif query.data == "hikari_notes":
+    elif query.data == "azusa_notes":
         query.message.edit_text(
             text=f"<b>๏ Setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
@@ -433,22 +433,22 @@ def hikari_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="hikari_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="azusa_")]]
             ),
         )
-    elif query.data == "hikari_support":
+    elif query.data == "azusa_support":
         query.message.edit_text(
-            text="*๏ Hikari support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on Hikari.",
+            text="*๏ Azusa support chats*"
+            "\nJoin My Support Group/Channel for see or report a problem on Azusa.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/rexaprivateroom"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/tirexgugel"),
+                    InlineKeyboardButton(text="Support", url="https://t.me/zxzansupport"),
+                    InlineKeyboardButton(text="Updates", url="https://t.me/zezanxproject"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="hikari_"),
+                    InlineKeyboardButton(text="Go Back", callback_data="azusa_"),
                  
                  ]
                 ]
@@ -456,19 +456,20 @@ def hikari_about_callback(update, context):
         )
 
 
-    elif query.data == "hikari_credit":
+    elif query.data == "azusa_credit":
         query.message.edit_text(
-            text=f"<b>๏ Credis for Hikari</b>\n"
-            f"\nHere Developers Making The Hikari Robot",
+            text=f"<b>๏ Credis for Azusa</b>\n"
+            f"\nHere Developers Making The Azusa Robot",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
                     InlineKeyboardButton(text="Rexa", url="t.me/JustRex"),
                     InlineKeyboardButton(text="Tonic", url="t.me/Bukan_guudlooking"),
+                    InlineKeyboardButton(text="Zezan", url="t.me/wndrslna"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="hikari_"),
+                    InlineKeyboardButton(text="Go Back", callback_data="azusa_"),
                  
                  ]
                 ]
@@ -501,7 +502,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="hikari_")
+                    InlineKeyboardButton(text="Go Back", callback_data="azusa_")
                  ]
                 ]
             ),
@@ -816,7 +817,7 @@ def main():
     )
 
     about_callback_handler = CallbackQueryHandler(
-        hikari_about_callback, pattern=r"hikari_", run_async=True
+        hikari_about_callback, pattern=r"azusa_", run_async=True
     )
 
     source_callback_handler = CallbackQueryHandler(
