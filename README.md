@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="https://telegra.ph/file/7771bb2497ae0cce78ae4.jpg">
+  <img src="https://telegra.ph/file/884e6797a14d7430ef5b7.jpg">
 </p>
 
-<h4><p align="center"> HIKARI ROBOT </p></h4>
+<h4><p align="center"> AZUSA ROBOT </p></h4>
 
-<p align="center">Hikari Robot is a modular bot running on python3 with autobots theme and have a lot features.</p>
+<p align="center">Azusa Robot is a modular bot running on python3 with autobots theme and have a lot features.</p>
 
 <p align="center">
-<a href="https://t.me/HirakiManageRobot"> <img src="https://img.shields.io/badge/Hikari-Robot-blue?&logo=telegram" alt="Hikari on Telegram" /> </a><br>
+<a href="https://t.me/AzusaxRobot"> <img src="https://img.shields.io/badge/Azusa-Robot-blue?&logo=telegram" alt="Azusa on Telegram" /> </a><br>
 <a href="https://python-telegram-bot.org"> <img src="https://img.shields.io/badge/PTB-13.9.0-white?&style=flat-round&logo=github" alt="Python Telegram Bot" /> </a>
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a><br>
 <a href="https://docs.telethon.dev"> <img src="https://img.shields.io/badge/Telethon-1.24.0-red?&style=flat-round&logo=github" alt="Telethon" /> </a>
@@ -23,12 +23,14 @@
 
 ```
 BIG THANKS TO : OM TONIC
+BIG THANKS TO : REXA
 `
 
 ### Contributors
 - [『TØNIC』 乂 ₭ILLΣR](https://github.com/Tonic990) : Prime Devs
 - [Arya](https://github.com/aryazakaria01) : Natsunagi Devs
 - [Xbarox](https://github.com/Xbaroxx)
+- [Rexa](https://github.com/Rexashh)
 
 ### Credit
 - Cutiepii
@@ -36,3 +38,4 @@ BIG THANKS TO : OM TONIC
 - Emiko Robot
 - Natsunagi Nagisa
 - Prime Mega Robot
+- Hikari Robot
