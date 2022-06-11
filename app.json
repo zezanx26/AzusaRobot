@@ -1,5 +1,5 @@
 {
-      "name": "Hikari Robot",
+      "name": "Azusa Robot",
       "description": "A Powerful  Telegram group management bot with autobots theme.",
       "keywords": [
          "telegram",
@@ -9,8 +9,8 @@
          "Hikari Robot"
       ],
     
-   "logo":    "https://telegra.ph/file/7771bb2497ae0cce78ae4.jpg",  
-   "repository": "https://github.com/Rexashh/HikariRobot",
+   "logo":    "https://telegra.ph/file/884e6797a14d7430ef5b7.jpg",  
+   "repository": "https://github.com/zezanx26/AzusaRobot",
    "addons": [
           {
          "options": {
@@ -51,7 +51,7 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "1224143544"
+         "value": "1863783304"
      },
 
       "STRING_SESSION": {
@@ -69,7 +69,7 @@
       },
       "BOT_USERNAME": {
          "description": "username of your bot without the @",
-         "value": "HikariManageRoobot"
+         "value": "AzusaxRobot"
       },
 
       "BOT_ID": {
@@ -79,12 +79,12 @@
 
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "JustRex"
+         "value": "wndrslna"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
-         "value": "rexaprivateroom"
+         "value": "zxzansupport"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
