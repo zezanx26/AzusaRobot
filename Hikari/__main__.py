@@ -32,9 +32,9 @@ from Hikari import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from Azusa.modules import ALL_MODULES
-from Azusa.modules.helper_funcs.chat_status import is_user_admin
-from Azusa.modules.helper_funcs.misc import paginate_modules
+from Hikari.modules import ALL_MODULES
+from Hikari.modules.helper_funcs.chat_status import is_user_admin
+from Hikari.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
