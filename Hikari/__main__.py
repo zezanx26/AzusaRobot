@@ -6,12 +6,12 @@ import time
 import re
 import sys
 import traceback
-import Azusa.modules.sql.users_sql as sql
+import Hikari.modules.sql.users_sql as sql
 from sys import argv
 from typing import Optional
 from telegram import __version__ as peler
 from platform import python_version as memek
-from Azusa import (
+from Hikari import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -131,7 +131,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("Azusa.modules." + module_name)
+    imported_module = importlib.import_module("Hikari.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -359,9 +359,9 @@ def help_button(update, context):
         pass
 
 
-def azusa_about_callback(update, context):
+def hikari_about_callback(update, context):
     query = update.callback_query
-    if query.data == "azusa_":
+    if query.data == "hikari_":
         query.message.edit_text(
             text="๏ I'm *Azusa Robot*, a powerful group management bot built to help you manage your group easily."
             "\n• My Owner : @wndrslna ."
@@ -377,23 +377,23 @@ def azusa_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="azusa_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="azusa_notes"),
+                    InlineKeyboardButton(text="Admins", callback_data="hikari_admin"),
+                    InlineKeyboardButton(text="Notes", callback_data="hikari_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="azusa_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="azusa_credit"),
+                    InlineKeyboardButton(text="Support", callback_data="hikari_support"),
+                    InlineKeyboardButton(text="Credits", callback_data="hikari_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Musicplayer", callback_data="source_"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="azusa_back"),
+                    InlineKeyboardButton(text="Go Back", callback_data="hikari_back"),
                  ]
                 ]
             ),
         )
-    elif query.data == "azusa_back":
+    elif query.data == "hikari_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
@@ -408,7 +408,7 @@ def azusa_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-    elif query.data == "azusa_admin":
+    elif query.data == "hikari_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
             "\nCongragulations, Azusa Robot now ready to manage your group."
@@ -425,7 +425,7 @@ def azusa_about_callback(update, context):
             ),
         )
 
-    elif query.data == "azusa_notes":
+    elif query.data == "hikarj_notes":
         query.message.edit_text(
             text=f"<b>๏ Setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
@@ -433,10 +433,10 @@ def azusa_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="azusa_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="hikari_")]]
             ),
         )
-    elif query.data == "azusa_support":
+    elif query.data == "hikari_support":
         query.message.edit_text(
             text="*๏ Azusa support chats*"
             "\nJoin My Support Group/Channel for see or report a problem on Azusa.",
@@ -448,7 +448,7 @@ def azusa_about_callback(update, context):
                     InlineKeyboardButton(text="Updates", url="https://t.me/zezanxproject"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="azusa_"),
+                    InlineKeyboardButton(text="Go Back", callback_data="hikari_"),
                  
                  ]
                 ]
@@ -456,10 +456,10 @@ def azusa_about_callback(update, context):
         )
 
 
-    elif query.data == "azusa_credit":
+    elif query.data == "hikari_credit":
         query.message.edit_text(
-            text=f"<b>๏ Credis for Azusa</b>\n"
-            f"\nHere Developers Making The Azusa Robot",
+            text=f"<b>๏ Credis for Hikari</b>\n"
+            f"\nHere Developers Making The Hikari Robot",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -469,7 +469,7 @@ def azusa_about_callback(update, context):
                     InlineKeyboardButton(text="Zezan", url="t.me/wndrslna"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="azusa_"),
+                    InlineKeyboardButton(text="Go Back", callback_data="hikari_"),
                  
                  ]
                 ]
@@ -744,7 +744,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1224143544:
+        if OWNER_ID != 1863783304:
             update.effective_message.reply_text(
                 "I'm free for everyone ❤️ If you wanna make me smile, just join"
                 "[My Channel]({})".format(DONATION_LINK),
